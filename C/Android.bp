@@ -4,6 +4,7 @@ cc_library {
     name: "liblzma",
     host_supported: true,
     vendor_available: true,
+    recovery_available: true,
     vndk: {
         enabled: true,
         support_system_process: true,
@@ -16,6 +17,7 @@ cc_library {
         "-Wall",
         "-Werror",
         "-Wno-empty-body",
+        "-Wno-enum-conversion",
     ],
     clang_cflags: ["-Wno-self-assign", "-Werror"],
 
@@ -71,7 +73,9 @@ cc_library {
                 "Bcj2Enc.c",
                 "DllSecur.c",
                 "LzFindMt.c",
+                "Lzma2DecMt.c",
                 "MtCoder.c",
+                "MtDec.c",
                 "Threads.c",
             ],
         },
