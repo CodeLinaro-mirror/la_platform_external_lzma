@@ -97,7 +97,6 @@ cc_library {
         "//apex_available:platform",
         "com.android.art", // from libartbase
         "com.android.art.debug",
-        "com.android.runtime",
     ],
     min_sdk_version: "apex_inherit",
 }
